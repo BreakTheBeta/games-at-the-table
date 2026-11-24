@@ -838,3 +838,118 @@ footer a {
     transition: none !important;
   }
 }
+
+/* Keep navigation and edition context compact so rules own the viewport. */
+.masthead {
+  min-height: 48px;
+  gap: 10px;
+}
+.brand {
+  font-size: 18px;
+}
+.brand-mark {
+  font-size: 24px;
+}
+.nav-link {
+  min-height: 44px;
+  padding: 0 14px;
+  font-size: 11px;
+}
+.section-heading {
+  margin: 12px 0 14px;
+}
+.section-heading h2 {
+  font-size: 24px;
+}
+.guide-shell .brand {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
+  min-height: 44px;
+}
+.guide-header {
+  padding: 4px 0 12px;
+}
+.guide-header > .back-link,
+.guide-header > .eyebrow,
+.guide-header > .muted,
+.guide-header .quiet-chip {
+  display: none;
+}
+.guide-header h1 {
+  font-size: 24px;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  margin: 0 0 3px;
+}
+.guide-header .chips {
+  gap: 0;
+}
+.guide-header .edition {
+  font-size: 10px;
+  line-height: 1.4;
+}
+.guide-header h1 em {
+  color: inherit;
+}
+.guide-shell .turn-panel.card,
+.guide-shell .win-panel.card {
+  padding: 18px;
+  gap: 16px;
+}
+.guide-shell .card__header {
+  gap: 5px;
+}
+.guide-shell .card__header h2 {
+  font-size: 25px;
+}
+.guide-shell .edition-panel.card {
+  padding: 10px 14px;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.edition-panel .card__header h2 {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.edition-panel .card__header > .muted {
+  font-size: 10px;
+  line-height: 1.4;
+}
+.edition-panel .button-row {
+  gap: 8px;
+  justify-content: flex-start;
+}
+.edition-panel .button {
+  min-height: 44px;
+  padding: 0 14px;
+  font-size: 11px;
+}
+.guide-shell .edition-panel .card__header {
+  gap: 2px;
+}
+.edition-controls {
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.edition-context h2 {
+  font-size: 12px !important;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.edition-context .muted {
+  font-size: 10px;
+  line-height: 1.4;
+  margin-top: 4px;
+}
+.edition-controls .button-row {
+  margin-top: 10px;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.edition-controls .button {
+  font-size: 11px;
+  padding: 0 14px;
+}

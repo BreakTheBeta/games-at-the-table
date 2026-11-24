@@ -7,3 +7,7 @@ public/.vercel/
 vercel-temporary*.json
 .env*
 !.env.example
+*.pem
+*.key
+*credentials*.json
+*secrets-report.json

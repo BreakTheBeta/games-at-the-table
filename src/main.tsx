@@ -20,15 +20,19 @@ function Masthead() {
   return (
     <nav className="masthead" aria-label="Main navigation">
       <Link className="brand" href="/">
-        <span className="brand-mark" aria-hidden="true">
-          ✧
-        </span>
-        <span>
-          At the table<span className="brand-sub">POCKET FIELD GUIDES</span>
-        </span>
+        {isGuide ? (
+          <span>← Games</span>
+        ) : (
+          <>
+            <span className="brand-mark" aria-hidden="true">
+              ✧
+            </span>
+            <span>At the table</span>
+          </>
+        )}
       </Link>
       <Link className="nav-link" href={isGuide ? "#share-title" : "#games"}>
-        {isGuide ? "Share guide ↗" : "Choose a game ↓"}
+        {isGuide ? "Share ↗" : "Choose a game ↓"}
       </Link>
     </nav>
   );
@@ -37,27 +41,9 @@ function Masthead() {
 function Menu() {
   return (
     <>
-      <header className="hero">
-        <div className="eyebrow">
-          <span className="tiny-line" /> Good company. Less rulebook.
-        </div>
-        <h1>
-          More playing.
-          <br />
-          <em>Less page turning.</em>
-        </h1>
-        <p>
-          Little guides for the games we love. Pull up a chair, pick your game,
-          and keep the night moving.
-        </p>
-        <div className="hero-bottom">
-          <span>Made for the middle of game night</span>
-          <span aria-hidden="true">✧</span>
-        </div>
-      </header>
       <section id="games" aria-labelledby="games-title">
         <div className="section-heading">
-          <h2 id="games-title">On the table</h2>
+          <h2 id="games-title">Game guides</h2>
           <span className="count">03 field guides</span>
         </div>
         <div className="game-list">
@@ -272,7 +258,7 @@ function App() {
       : "Games at the table · Pocket field guides";
   }, []);
   return (
-    <div className="site-shell">
+    <div className={isGuide ? "site-shell guide-shell" : "site-shell"}>
       <a className="skip-link" href="#main">
         Skip to content
       </a>

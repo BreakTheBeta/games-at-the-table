@@ -121,32 +121,6 @@ function Citadels() {
   const [original, setOriginal] = useState(false);
   return (
     <>
-      <Card className="panel edition-panel">
-        <Card.Header>
-          <p className="eyebrow">Check your box</p>
-          <h2>Choose your edition</h2>
-          <p className="muted">
-            Original eight characters · 4–7 players. Other casts and 2–3-player
-            games use different rules.
-          </p>
-        </Card.Header>
-        <div className="button-row" role="group" aria-label="Citadels edition">
-          <Button
-            variant={original ? "secondary" : "primary"}
-            aria-pressed={!original}
-            onPress={() => setOriginal(false)}
-          >
-            2016 / Classic reprint
-          </Button>
-          <Button
-            variant={original ? "primary" : "secondary"}
-            aria-pressed={original}
-            onPress={() => setOriginal(true)}
-          >
-            Original 8-district game
-          </Button>
-        </div>
-      </Card>
       <div className="guide-layout">
         <Steps
           steps={[
@@ -174,6 +148,35 @@ function Citadels() {
             <h2>How to win</h2>
           </Card.Header>
           <Card.Content>
+            <div className="edition-controls">
+              <div className="edition-context">
+                <h2>Edition</h2>
+                <p className="muted">
+                  Original eight characters · 4–7 players. Other casts and
+                  2–3-player games use different rules.
+                </p>
+              </div>
+              <div
+                className="button-row"
+                role="group"
+                aria-label="Citadels edition"
+              >
+                <Button
+                  variant={original ? "secondary" : "primary"}
+                  aria-pressed={!original}
+                  onPress={() => setOriginal(false)}
+                >
+                  2016 / Classic
+                </Button>
+                <Button
+                  variant={original ? "primary" : "secondary"}
+                  aria-pressed={original}
+                  onPress={() => setOriginal(true)}
+                >
+                  Original
+                </Button>
+              </div>
+            </div>
             <div className="win-routes">
               <div>
                 <b>{original ? "8" : "7"}</b>
