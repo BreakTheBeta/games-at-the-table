@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.vercel/
+public/.vercel/
+.venv/
+*.tsbuildinfo
+vercel-temporary*.json
+.env*
+!.env.example
