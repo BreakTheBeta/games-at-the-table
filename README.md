@@ -22,7 +22,7 @@ The build runs TypeScript checks and emits `dist/`, including real documents at 
 
 ## Theme
 
-`src/theme.css` defines the **Field Guide** theme using HeroUI's semantic CSS variables. Forest backgrounds, parchment text, antique gold accents, sage highlights, serif headings, shared spacing, and rounded surfaces apply to the menu, rules, and sharing UI. HeroUI supplies Cards, Buttons, Links, Chips, and the accessible Accordion. Reduced-motion preferences and keyboard focus are supported.
+`src/theme.css` defines the **HeroUI-inspired light** theme using HeroUI's semantic CSS variables. Soft gray backgrounds, near-black text, muted gray secondary headings, self-hosted Inter typography, pill-shaped controls, shared spacing, and rounded white surfaces apply to the menu, rules, and sharing UI. HeroUI supplies Cards, Buttons, Links, Chips, and the accessible Accordion. Reduced-motion preferences and keyboard focus are supported.
 
 `src/catalog.ts` holds menu metadata; `src/main.tsx` and `src/ExtraGuide.tsx` hold the guides. `src/ShareCard.tsx` supplies the shared QR, copy, and PNG download flow. Add games to the catalog and emit their documents in `scripts/pages.mjs`.
 

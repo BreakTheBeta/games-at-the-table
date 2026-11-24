@@ -4,6 +4,7 @@ import { Accordion, Card, Chip, Link } from "@heroui/react";
 import { ShareCard } from "./ShareCard";
 import { ExtraGuide } from "./ExtraGuide";
 import { games } from "./catalog";
+import "@fontsource-variable/inter";
 import "./theme.css";
 
 const currentGame = games.find(

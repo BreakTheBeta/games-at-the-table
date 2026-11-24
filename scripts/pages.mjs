@@ -32,7 +32,7 @@ if (process.env.SITE_URL) {
       width: 800,
       margin: 4,
       errorCorrectionLevel: "M",
-      color: { dark: "#101c18", light: "#ffffff" },
+      color: { dark: "#18181b", light: "#ffffff" },
     });
   }
 }
