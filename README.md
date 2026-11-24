@@ -26,7 +26,13 @@ The build runs TypeScript checks and emits `dist/`, including real documents at 
 
 `src/catalog.ts` holds menu metadata; `src/main.tsx` and `src/ExtraGuide.tsx` hold the guides. `src/ShareCard.tsx` supplies the shared QR, copy, and PNG download flow. Add games to the catalog and emit their documents in `scripts/pages.mjs`.
 
-## Deploy
+## Cloudflare Drop
+
+Run `npm run build`, then upload the contents of `dist/` (or a ZIP containing those contents) at https://www.cloudflare.com/drop/. Only production assets belong in that upload; never include `.vercel/`, local deployment receipts, credentials, or the repository folder. The site generates share QR codes using its current browser origin.
+
+Drop can publish without an account. Claim its deployment before the deadline returned by Cloudflare to retain it. The claim URL is an ownership credential and must stay out of this public repository. `public/_headers` carries the static security headers for Cloudflare hosting.
+
+## Vercel deployment
 
 Import this repository into Vercel. The tracked `vercel.json` selects Vite and `dist/`; `npm run build` is the build command. This static personal project needs no paid services, secrets, or environment variables. Hosting account access and plan selection are managed in Vercel.
 
